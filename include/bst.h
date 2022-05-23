@@ -5,12 +5,6 @@
 template <typename T>
 class BST {
  public:
-  struct Node {
-    T value;
-    int amount;
-    Node* leftBr;
-    Node* rightBr;
-  };
   BST() {
     root == nullptr;
   }
@@ -26,6 +20,12 @@ class BST {
   }
 
  private:
+  struct Node {
+    T value;
+    int amount;
+    Node* leftBr;
+    Node* rightBr;
+  };
   Node* root;
   Node* addNode(Node*, T);
   int depthTree(Node*);
