@@ -44,7 +44,7 @@ typename BST <T >::Node* BST <T >::addNode(Node* root, T value) {
   } else if (value > root -> value) {
     root -> rightBr = addNode(root -> rightBr, value);
   } else {
-    root -> amount++;
+    (root -> amount)++;
   }
   return root;
 }
