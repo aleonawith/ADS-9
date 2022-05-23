@@ -13,10 +13,10 @@ class BST {
     root = addNode(root, value);
   }
   int depth() {
-    return depthTree(root) - 1;
+    return (depthTree(root) - 1);
   }
   int search(T value) {
-    return searchNode(root, value);
+    return (searchNode(root, value) + 1);
   }
 
  private:
@@ -35,15 +35,15 @@ class BST {
 template <typename T>
 typename BST <T >::Node* BST <T >::addNode(Node* root, T val) {
   if (!root) {
-   root = new Node;
-   root -> value = val;
-   root -> leftBr = root -> rightBr = nullptr;
+    root = new Node;
+    root -> value = val;
+    root -> leftBr = root -> rightBr = nullptr;
   } else if (root -> value > val) {
-   root -> leftBr = addNode(root -> leftBr, val);
+    root -> leftBr = addNode(root -> leftBr, val);
   } else if (root->value < val) {
-   root -> rightBr = addNode(root -> rightBr, val);
+    root -> rightBr = addNode(root -> rightBr, val);
   } else {
-   (root -> amount)++;
+    (root -> amount)++;
   }
     return root;
 }
@@ -68,12 +68,12 @@ int BST<T>::searchNode(Node* root, T value) {
   Node* t = root;
   if (!root) {
     return 0;
-  } else if (root -> value == value) {
+  } else if (root -> value == val) {
     return root -> amount;
-  } else if (root -> value > value) {
-    return searchNode(root -> leftBr, value);
+  } else if (root -> value > val) {
+    return searchNode(root -> leftBr, val);
   } else {
-    return searchNode(root -> rightBr, value);
+    return searchNode(root -> rightBr, val);
   }
 }
 #endif  // INCLUDE_BST_H_
