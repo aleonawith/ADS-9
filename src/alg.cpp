@@ -24,5 +24,7 @@ BST<std::string> makeTree(const char* filename) {
       newTree.add(word);
     }
     return newTree;
+  } else {
+    throw std::string("Did`t open!");
   }
 }
