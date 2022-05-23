@@ -6,7 +6,7 @@ template <typename T>
 class BST {
  public:
   BST() {
-    root == nullptr;
+    root = nullptr;
   }
   ~BST() {}
   void add(T value) {
