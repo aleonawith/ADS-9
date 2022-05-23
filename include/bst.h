@@ -64,7 +64,7 @@ int BST<T>::depthTree(Node* root) {
 }
 
 template <typename T>
-int BST<T>::searchNode(Node* root, T value) {
+int BST<T>::searchNode(Node* root, T val) {
   Node* t = root;
   if (!root) {
     return 0;
