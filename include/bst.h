@@ -22,9 +22,9 @@ class BST {
  private:
   struct Node {
     T value;
-    int amount;
-    Node* leftBr;
-    Node* rightBr;
+    int amount{};
+    Node* leftBr{};
+    Node* rightBr{};
   };
   Node* root;
   Node* addNode(Node*, T);
