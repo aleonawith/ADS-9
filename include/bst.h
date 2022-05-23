@@ -33,20 +33,19 @@ class BST {
 };
 
 template <typename T>
-typename BST <T >::Node* BST <T >::addNode(Node* root, T value) {
+typename BST <T >::Node* BST <T >::addNode(Node* root, T val) {
   if (!root) {
-    root = new Node;
-    root -> value = value;
-    root -> amount = 1;
-    root -> leftBr = root -> rightBr = nullptr;
-  } else if (value < root -> value) {
-    root -> leftBr = addNode(root -> leftBr, value);
-  } else if (value > root -> value) {
-    root -> rightBr = addNode(root -> rightBr, value);
+   root = new Node;
+   root -> value = val;
+   root -> leftBr = root -> rightBr = nullptr;
+  } else if (root -> value > val) {
+   root -> leftBr = addNode(root -> leftBr, val);
+  } else if (root->value < val) {
+   root -> rightBr = addNode(root -> rightBr, val);
   } else {
-    (root -> amount)++;
+   (root -> amount)++;
   }
-  return root;
+    return root;
 }
 
 template <typename T>
