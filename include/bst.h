@@ -26,10 +26,10 @@ class BST {
   }
 
 private:
- Node* root;
- Node* addNode(Node*, T);
- int depthTree(Node*);
- int searchNode(Node*, T);
+  Node* root;
+  Node* addNode(Node*, T);
+  int depthTree(Node*);
+  int searchNode(Node*, T);
 };
 
 template <typename T>
@@ -39,9 +39,9 @@ typename BST <T >::Node* BST <T >::addNode(Node* root, T value) {
     root -> value = value;
     root -> amount = 1;
     root -> leftBr = root -> rightBr = nullptr;
-  } else if {
+  } else if (value < root -> value) {
     root -> leftBr = addNode(root -> leftBr, value);
-  } else if {
+  } else if (value > root -> value) {
     root -> rightBr = addNode(root -> rightBr, value);
   } else {
     root -> amount++;
